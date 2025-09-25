@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tourist Places</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="profile.html">Profile</a>
+      <a href="hometown.html">Hometown</a>
+      <a href="food.html">Food</a>
+      <a href="tourist.html" class="active">Tourist</a>
+    </div>
+    <div class="socials">
+     <a href="https://instagram.com/dltbintang_" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://github.com/DeltABintanG" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </nav>
+
+  <section class="main-section">
+    <div class="text-content slide-in">
+      <h1>Sedudo Waterfall</h1>
+      <p><a href="https://maps.app.goo.gl/9B6cvaVyfsRk5DqJ7" style="color: #00c853; text-decoration: none;">Sedudo Waterfall</a> is one of the popular tourist attractions in Nganjuk.
+         it is part of culture in the city, every year theres a rituals that mark 
+         the javanese new year that celebrated during the month known as Sura, sometimes written as Suro. 
+      </p>
+    </div>
+    <div>
+      <img src="assets/sedudo-waterfall.jpg" alt="Tourist Place 1" class="tourist-img slide-in-right">
+    </div>
+    <div>
+      <img src="assets/Semantok.jpg" alt="Tourist Place 2" class="tourist2-img slide-in">
+    </div>
+    <div class="text-content slide-in-right">
+      <h1>Semantok Dam</h1>
+      <p><a href="https://maps.app.goo.gl/C9sFLVqx51ndL49v6" style="color: #00c853; text-decoration: none;">Semantok Dam</a>
+         is opened by the 7th president Joko Widodo 2022.
+         it is the longest dam in south east asia. it mainly uses for irigation but
+         it also serves as tourist attraction.
+      </p>
+    </div>
+    <div class="text-content slide-in">
+      <h1>Jolotundo Edupark</h1>
+      <p><a href="https://maps.app.goo.gl/5XVpG8zX3NJwtCc59" style="color: #00c853; text-decoration: none;">Jolotundo Edupark</a>
+         is relatively new tourist attraction that open in Nganjuk.
+         It offer glamping experience, it also have mini zoo. It also perfect palce for family with kid,
+         to teach about nature. 
+      </p>
+    </div>
+    <div>
+      <img src="assets/jolotundo.webp" alt="Tourist Place 1" class="tourist-img slide-in-right">
+    </div>
+  </section>
+
+  <!-- script for visible assets -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(".slide-in, .slide-in-right");
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  elements.forEach(el => observer.observe(el));
+  });
+  </script>
+
+</body>
+</html>
